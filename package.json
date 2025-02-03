@@ -1,16 +1,9 @@
 {
-    "private": true,
+    "name": "@KyleFontenot/mastercss",
+    "version": "0.1.1",
     "type": "module",
     "scripts": {
-        "submodules": "pnpm dlx tsx submodules",
-        "postinstall": "pnpm dlx husky install",
-        "build": "cross-env NODE_OPTIONS=--max-old-space-size=16384 pnpm --filter \"./packages/*\" build",
-        "build:examples": "cross-env NODE_OPTIONS=--max-old-space-size=16384 pnpm --filter \"./examples/*\" --parallel build",
-        "check": "pnpm run commit-check && pnpm run build && pnpm --filter \"./packages/*\" --parallel run \"/^(test|lint|type-check)/\"",
-        "test": "cross-env NODE_OPTIONS=--max-old-space-size=16384 pnpm --filter \"./packages/*\" --parallel test",
-        "e2e": "cross-env NODE_OPTIONS=--max-old-space-size=16384 pnpm --filter \"./packages/*\" --parallel e2e",
-        "lint": "cross-env NODE_OPTIONS=--max-old-space-size=16384 pnpm --filter \"./packages/*\" --parallel lint",
-        "type-check": "cross-env NODE_OPTIONS=--max-old-space-size=16384 pnpm --filter \"./packages/*\" --parallel type-check",
+        "build": "bun run build.ts",
         "commit-check": "commitlint --from=HEAD~1 --verbose"
     },
     "engines": {
@@ -18,22 +11,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/master-co/css.git"
+        "url": "https://github.com/KyleFontenot/mastercss.git"
     },
+"publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "private"
+  },
     "dependencies": {
-        "@eslint/compat": "^1.2.5",
-        "@playwright/test": "^1.49.1",
-        "@swc-node/jest": "^1.8.12",
-        "@techor/fs": "^3.1.7",
-        "@techor/glob": "^3.1.7",
-        "@techor/jest-dom": "^3.1.7",
-        "@techor/repo": "^3.1.7",
-        "@types/node": "^22.10.7",
-        "@types/node-fetch": "^2.6.12",
-        "@types/shuffle-array": "^1.0.5",
-        "cross-env": "^7.0.3",
-        "eslint": "^9.18.0",
-        "eslint-plugin-playwright": "^2.1.0",
         "execa": "^9.5.2",
         "fast-glob": "^3.3.3",
         "get-tsconfig": "^4.8.1",
@@ -43,35 +27,11 @@
         "nanoid": "^4.0.2",
         "shuffle-array": "^1.0.1",
         "strip-ansi": "^7.1.0",
-        "techor": "^3.1.7",
         "tinybench": "^3.1.0",
         "ts-dedent": "^2.2.0",
         "ts-jest": "^29.2.5",
-        "tsx": "^4.19.2",
         "typescript": "^5.7.3",
         "vite-tsconfig-paths": "^5.1.4",
         "vitest": "^2.1.8"
-    },
-    "devDependencies": {
-        "@master/create-css": "workspace:^",
-        "@master/css": "workspace:^",
-        "@master/css-cli": "workspace:^",
-        "@master/css-explore-config": "workspace:^",
-        "@master/css-extractor": "workspace:^",
-        "@master/css-extractor.vite": "workspace:^",
-        "@master/css-extractor.webpack": "workspace:^",
-        "@master/css-language-server": "workspace:^",
-        "@master/css-language-service": "workspace:^",
-        "@master/css-runtime": "workspace:^",
-        "@master/css-server": "workspace:^",
-        "@master/css-validator": "workspace:^",
-        "@master/css.nuxt": "workspace:^",
-        "@master/css.react": "workspace:^",
-        "@master/css.svelte": "workspace:^",
-        "@master/css.vue": "workspace:^",
-        "@master/eslint-config-css": "workspace:^",
-        "@master/eslint-plugin-css": "workspace:^",
-        "master-css-vscode": "workspace:^",
-        "shared": "workspace:^"
     }
 }

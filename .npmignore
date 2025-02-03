@@ -1,0 +1,10 @@
+.git
+.github
+.npm
+node_modules
+yarn-error.log
+yarn.lock
+bun.lockb
+examples
+.husky
+.vscode
