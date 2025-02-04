@@ -1,5 +1,5 @@
 {
-    "name": "@KyleFontenot/mastercss",
+    "name": "@kylefontenot/mastercss",
     "version": "0.1.1",
     "type": "module",
     "scripts": {
@@ -9,14 +9,23 @@
     "engines": {
         "node": "^22"
     },
+    "exports": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.cjs"
+    },
+    "main": "./dist/index.cjs",
+    "jsnext:main": "./dist/index.mjs",
+    "esnext": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/KyleFontenot/mastercss.git"
     },
-"publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "private"
-  },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com",
+        "access": "public"
+    },
     "dependencies": {
         "execa": "^9.5.2",
         "fast-glob": "^3.3.3",
@@ -33,5 +42,9 @@
         "typescript": "^5.7.3",
         "vite-tsconfig-paths": "^5.1.4",
         "vitest": "^2.1.8"
+    },
+    "devDependencies": {
+        "@types/bun": "^1.2.2",
+        "@types/jest": "^29.5.14"
     }
 }
