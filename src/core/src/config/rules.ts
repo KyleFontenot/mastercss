@@ -1,9 +1,9 @@
-import cssEscape from 'shared/utils/css-escape'
+import cssEscape from '../../../shared/utils/css-escape'
 import type { SyntaxRule } from '../syntax-rule'
 import SyntaxRuleType from '../syntax-rule-type'
 import { BORDER_STYLE_VALUES, COLOR_VALUE_REGEX, IMAGE_VALUE_REGEX, NUMBER_VALUE_REGEX, VALUE_DELIMITERS } from '../common'
 import autofillSolidStyle from '../utils/autofill-solid-style'
-import { SyntaxRuleDefinition } from '../types/config'
+import type { SyntaxRuleDefinition } from '../types/config'
 
 const rules = {
     group: {

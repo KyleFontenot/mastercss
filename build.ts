@@ -1,15 +1,19 @@
 import type { BuildOptions } from "bun"
 
-try {
-  const built = await Bun.build({
-    entrypoints: ["./src/core"],
-    outdir: "./dist"
-  } satisfies BuildOptions)
-  for (let log of built.logs) {
-    console.log(log)
-  }
+const modules = [
+  'core',
+  'runtime',
+  'extractor'
+]
 
-  console.log('inspect::', built)
+try {
+  for (const module of modules) {
+    const build = await Bun.build({
+      entrypoints: [`./src/${module}/src/index.ts`],
+      outdir: "./dist/core"
+    } satisfies BuildOptions)
+    console.log(build)
+  }
 }
 catch (e) {
   console.error(e)

@@ -10,18 +10,18 @@
         "node": "^22"
     },
     "exports": {
-       ".": {
-        "import": "./dist/index.js",
-        "require": "./dist/index.cjs"
-      },
-      "./css": {
-        "import": "./dist/css.js",
-        "require": "./dist/css.cjs"
-      },
-      "./parser": {
-        "import": "./dist/parser.js",
-        "require": "./dist/parser.cjs"
-      }
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./css": {
+            "import": "./dist/css.js",
+            "require": "./dist/css.cjs"
+        },
+        "./parser": {
+            "import": "./dist/parser.js",
+            "require": "./dist/parser.cjs"
+        }
     },
     "main": "./dist/index.cjs",
     "jsnext:main": "./dist/index.mjs",
@@ -37,6 +37,7 @@
         "access": "public"
     },
     "dependencies": {
+        "chokidar": "^4.0.3",
         "execa": "^9.5.2",
         "fast-glob": "^3.3.3",
         "get-tsconfig": "^4.8.1",

@@ -6,7 +6,7 @@ import variables from './variables'
 import rules from './rules'
 import modes from './modes'
 import functions from './functions'
-import { Config } from '../types/config'
+import type { Config } from '../types/config'
 
 const config: Config = {
     at,
