@@ -1,0 +1,173 @@
+  /* Enhanced CSS Reset with Customization and Accessibility */
+
+  :root {
+    /* Typography Variables */
+    --font-base-size: 16px;
+    --font-scale-ratio: 1.2;
+    --line-height-base: 1.5;
+
+    /* Color Variables */
+    --color-text-primary: #000;
+    --color-text-secondary: #444;
+    --color-background: #fff;
+
+    /* Spacing Variables */
+    --spacing-base: 1rem;
+
+    /* Typography Scale */
+    --font-size-h1: calc(var(--font-base-size) * var(--font-scale-ratio) * 3);
+    --font-size-h2: calc(var(--font-base-size) * var(--font-scale-ratio) * 2.5);
+    --font-size-h3: calc(var(--font-base-size) * var(--font-scale-ratio) * 2);
+    --font-size-h4: calc(var(--font-base-size) * var(--font-scale-ratio) * 1.5);
+    --font-size-body: var(--font-base-size);
+  }
+
+  /* Global Reset with Performance Considerations */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid transparent;
+    scroll-margin-top: 2rem; /* Smooth scrolling offset for anchors */
+  }
+
+  /* Document Setup */
+  html {
+    font-size: var(--font-base-size);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Accessibility Improvements for Interactive Elements */
+  a {
+    color: currentColor;
+    text-decoration-skip-ink: auto;
+    transition: color 0.2s ease;
+  }
+
+  a:focus,
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  /* Enhanced Focus States */
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-secondary);
+  }
+
+  h1 {
+    font-size: var(--font-size-h1);
+    margin-bottom: calc(var(--spacing-base) * 1.5);
+  }
+
+  h2 {
+    font-size: var(--font-size-h2);
+    margin-bottom: var(--spacing-base);
+  }
+
+  h3 {
+    font-size: var(--font-size-h3);
+    margin-bottom: calc(var(--spacing-base) * 0.75);
+  }
+
+  h4 {
+    font-size: var(--font-size-h4);
+    margin-bottom: calc(var(--spacing-base) * 0.5);
+  }
+
+  /* Media Responsiveness */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  /* List Normalization */
+  ul,
+  ol,
+  menu {
+    list-style: none;
+  }
+
+  /* Form Element Normalization */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    appearance: none;
+    background: transparent;
+  }
+
+  /* Prevent textarea resize unless explicitly allowed */
+  textarea {
+    resize: vertical;
+  }
+
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* Screen Reader Improvements */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Print Optimization */
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }

@@ -2,10 +2,10 @@
     "name": "@master/css-server",
     "type": "module",
     "scripts": {
-        "build": "techor build \"src/**/*.ts\"",
+        "build": "bun build ./index.tsx --outdir ./build",
         "dev": "pnpm build --watch",
         "lint": "eslint",
-        "type-check": "tsc --noEmit",
+        "check": "biome ",
         "test": "vitest"
     },
     "license": "MIT",
@@ -14,11 +14,11 @@
     "funding": "https://rc.css.master.co/sponsor",
     "homepage": "https://css.master.co",
     "bugs": {
-        "url": "https://github.com/master-co/css/issues"
+        "url": "https://github.com/KyleFontenot/mastercss/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/master-co/css.git",
+        "url": "https://github.com/KyleFontenot/master/css.git",
         "directory": "packages/server"
     },
     "keywords": [

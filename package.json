@@ -10,8 +10,18 @@
         "node": "^22"
     },
     "exports": {
+       ".": {
         "import": "./dist/index.js",
         "require": "./dist/index.cjs"
+      },
+      "./css": {
+        "import": "./dist/css.js",
+        "require": "./dist/css.cjs"
+      },
+      "./parser": {
+        "import": "./dist/parser.js",
+        "require": "./dist/parser.cjs"
+      }
     },
     "main": "./dist/index.cjs",
     "jsnext:main": "./dist/index.mjs",

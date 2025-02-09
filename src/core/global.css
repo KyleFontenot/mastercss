@@ -1,0 +1,221 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
+@import url('./reset.css') reset;
+@layer reset, base, theme, preset, components, general;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+  }
+  ::selection {
+    background-color: var(--primary, "salmon");
+    color: white;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    color: var(--black, #333);
+    position: relative;
+    min-height: 100vh;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    background-color: var(--white, #fff);
+    color: var(--black, #333);
+    font-family: var(--font-1, 'Inter');
+    --base: 0.5rem;
+  }
+
+  main {
+    min-height: 86vh;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  span,
+  div,
+  dl,
+  dt {
+    color: var(--black, #333);
+  }
+
+
+  h2 {
+    font-family: var(--font-2);
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.6px;
+  }
+
+  h3 {
+    font-family: var(--font-1);
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  h4 {
+    font-size: 1.45rem;
+    line-height: 1.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    line-height: 1.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    line-height: 1.8rem;
+    text-indent: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--black, #333);
+  }
+
+  a {
+    color: var(--black, #333);
+    text-decoration: none;
+  }
+
+  p a {
+    text-decoration: none;
+    position: relative;
+    background: linear-gradient(to bottom right, var(--primary, "salmon"), var(--black-2, #444));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: var(--primary, "salmon");
+      display: block;
+      transform: translate(0, 0);
+      transition: 0.2s;
+      bottom: -2px;
+      left: 0;
+    }
+
+    &:hover::after {
+      transform: translate(0, 3px);
+    }
+  }
+
+  dl {
+    margin-bottom: 2.6rem;
+  }
+
+  dt,
+  dd {
+    margin-top: 0.6rem;
+  }
+
+  dd {
+    margin-left: 3rem;
+  }
+
+  blockquote {
+    background-color: var(--white-3, #eee);
+    padding: 1rem 1rem;
+    border-radius: 12px;
+    margin: 2rem 2rem 2rem 0.3rem;
+    width: 100%;
+    position: relative;
+
+    & p {
+      margin-bottom: 0;
+    }
+
+    & code,
+    p {
+      font-size: 110%;
+      text-align: center;
+    }
+
+    & code {
+      padding: 0.5rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 100%;
+      display: block;
+      top: 0;
+      left: 0;
+      background-color: var(--primary, "salmon");
+    }
+
+    & p {
+      font-size: 100%;
+      line-height: 170%;
+    }
+  }
+
+  pre code {
+    background-color: inherit;
+    outline: inherit;
+  }
+
+  code {
+    background-color: var(--white-2, #f3f3f3);
+    font-family: monospace;
+    outline: 1px solid var(--white-3, #eee);
+    margin-inline: 3px;
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+
+
+  strong {
+    font-weight: 500;
+  }
+
+  li:has(input[type='checkbox']) {
+    list-style-type: none;
+    margin-left: 0;
+  }
+
+  input[disabled] {
+    background-color: #f3f3f3;
+  }
+
+
+  /*:root {*/
+  /*--base: 0.5rem;*/
+  /*}*/
+
+  /* Text classes */
+.text-3{
+
+  font-size: clamp(1.2rem, 1.12rem + 0.41vw, 1.5rem);
+  font-size: clamp(1.2rem, 1.12rem + 0.41vw, 1.5rem);
+  line-height: clamp(1.2rem, 1.12rem + 0.41vw, 1.5rem)
+};
+
+
+/*--text-1: clamp(2.49rem, 1.88rem + 3.05vw, 4.74rem);*/
+/*--text-2: clamp(2.07rem, 1.67rem + 2vw, 3.55rem);*/
+/*--text-3: clamp(1.73rem, 1.47rem + 1.27vw, 2.66rem);*/
+/*--text-4: clamp(1.44rem, 1.29rem + 0.76vw, 2rem);*/
+/*--text-5: clamp(1.2rem, 1.12rem + 0.41vw, 1.5rem);*/
+
+}
