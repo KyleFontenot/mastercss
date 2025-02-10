@@ -5,19 +5,22 @@ import type { Config } from '../../core/src/index'
 import extractLatentClasses from './functions/extract-latent-classes'
 import fs, { existsSync } from 'fs'
 import { minimatch } from 'minimatch'
-//import log from '@techor/log'
-import extend from '@techor/extend'
+import extend from '../../shared/utils/extend'
 import { explorePathsSync } from '@techor/glob'
 
 import exploreConfig from 'explore-config'
 import exploreCSSConfig from '@master/css-explore-config'
-import { generateValidRules } from '@master/css-validator'
+
+//import { generateValidRules } from '@master/css-validator'
+import { generateValidRules } from '../../validator/index'
+
 import chokidar, { type ChokidarOptions, type FSWatcher } from 'chokidar'
 import { EventEmitter } from 'node:events'
 import cssEscape from '../../shared/utils/css-escape'
 import path, { resolve } from 'path'
 import { Stats } from 'node:fs'
 
+// TODO:, does there need to be a "exploreConfig" tool?
 // TODO maybe make a logging tool?
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-declaration-merging

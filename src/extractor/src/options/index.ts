@@ -1,5 +1,6 @@
-import type { Config } from '@master/css'
-import type { Pattern as FastGlobPattern, Pattern } from 'fast-glob'
+//import type { Config } from '@master/css'
+import type { Config } from '../../../core/src/index'
+import type { Pattern as FastGlobPattern } from 'fast-glob'
 
 const options: Options = {
     // enable verbose Logs

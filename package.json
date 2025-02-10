@@ -2,6 +2,8 @@
     "name": "@kylefontenot/mastercss",
     "version": "0.1.1",
     "type": "module",
+"main": "dist/index.js",
+  "module": "dist/index.mjs",
     "scripts": {
         "build": "bun run build.ts",
         "commit-check": "commitlint --from=HEAD~1 --verbose"
@@ -55,7 +57,12 @@
         "vitest": "^2.1.8"
     },
     "devDependencies": {
+        "@master/css-explore-config": "^2.0.0-rc.27",
+        "@master/css-validator": "^2.0.0-beta.160",
+        "@techor/extend": "^3.1.7",
+        "@techor/glob": "^3.1.7",
         "@types/bun": "^1.2.2",
-        "@types/jest": "^29.5.14"
+        "@types/jest": "^29.5.14",
+        "csstype": "^3.1.3"
     }
 }
