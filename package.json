@@ -2,8 +2,6 @@
     "name": "@kylefontenot/mastercss",
     "version": "0.1.1",
     "type": "module",
-"main": "dist/index.js",
-  "module": "dist/index.mjs",
     "scripts": {
         "build": "bun run build.ts",
         "commit-check": "commitlint --from=HEAD~1 --verbose"
