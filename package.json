@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
         "build": "bun run build.ts",
-        "commit-check": "commitlint --from=HEAD~1 --verbose"
+        "commit-check": "commitlint --from=HEAD~1 --verbose",
+        "demo" : "bun run ./demonstration/testingpage.ts"
     },
     "engines": {
         "node": "^22"
