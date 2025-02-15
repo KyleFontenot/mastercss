@@ -1,30 +1,33 @@
 import homepage from "./page.html";
 //import masterglobal from "../src/core/global.css";
 
+console.log(await Bun.$`pwd`.text())
+
 const server = Bun.serve({
-  // Add HTML imports to `static`
   static: {
-    // Bundle & route index.html to "/"
     "/": homepage,
-    //"/style": masterglobal,
-    // Bundle & route dashboard.html to "/dashboard"
-    //"/dashboard": dashboard,
+    //"/master.js": new Response(await Bun.file("dist/core/src/index.js").text(), {
+    //  headers: {
+    //    "Content-Type": "application/javascript",
+    //  }
+    //}),
   },
 
-  // Enable development mode for:
-  // - Detailed error messages
-  // - Rebuild on request
   development: true,
+  port: 5173,
 
   // Handle API requests
   async fetch(req: Request) {
-    // ...your API code
-    if (req.url.endsWith("/api/users")) {
-      //const users = await Bun.sql`SELECT * FROM users`;
-      return new Response();
-    }
 
-    // Return 404 for unmatched routes
+    //console.log("hello?", req.url)
+    if (req.url.endsWith("/master.js")) {
+      //console.log("endswith::::  testing.js")
+      return new Response(await Bun.file("dist/runtime/src/index.js").text(), {
+        headers: {
+          "Content-Type": "application/javascript",
+        }
+      });
+    }
     return new Response("Not Found", { status: 404 });
   },
 });
