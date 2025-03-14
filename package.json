@@ -5,7 +5,8 @@
     "scripts": {
         "build": "bun run build.ts",
         "commit-check": "commitlint --from=HEAD~1 --verbose",
-        "demo" : "bun run ./demonstration/testingpage.ts"
+        "demo": "bun run build.ts build && bun run ./demonstration/testingpage.ts",
+        "dev": "bun run build && bun run ./demonstration/testingpage.ts"
     },
     "engines": {
         "node": "^22"
@@ -38,6 +39,7 @@
         "access": "public"
     },
     "dependencies": {
+        "@master/css-server": "^2.0.0-rc.49",
         "chokidar": "^4.0.3",
         "execa": "^9.5.2",
         "fast-glob": "^3.3.3",
@@ -53,7 +55,8 @@
         "ts-jest": "^29.2.5",
         "typescript": "^5.7.3",
         "vite-tsconfig-paths": "^5.1.4",
-        "vitest": "^2.1.8"
+        "vitest": "^2.1.8",
+        "yoctocolors": "^2.1.1"
     },
     "devDependencies": {
         "@master/css-explore-config": "^2.0.0-rc.27",

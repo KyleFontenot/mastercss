@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-declaration-merging */
 import { SyntaxRule } from './syntax-rule'
-import { config as defaultConfig } from './config'
+import { defaultconfig as defaultConfig } from './config'
 import hexToRgb from './utils/hex-to-rgb'
 import { flattenObject } from './utils/flatten-object'
 import extendConfig from './utils/extend-config'

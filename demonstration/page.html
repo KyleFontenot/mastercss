@@ -7,17 +7,22 @@
   <title></title>
   <!--<link href="css/style.css" rel="stylesheet">-->
 
-<script type="text/javascript" src="../dist/runtime/src/index.js">
-  <script>
-    console.log(window.location.href)
+  <script type="text/javascript" src="../dist/runtime.js" >
   </script>
-<!--<script type="text/javascript" src="master.js">-->
-<!--</script>-->
-<script type="module">
-  //import something from "./master.js"
-  console.log('something::', )
-  //console.log(something)
-</script>
+  <script type="module">
+    import {initCSSRuntime} from '../dist/runtime.js'
+    initCSSRuntime({
+      variables: {
+        primary: '#000000'
+      }
+    })
+
+  </script>
+
+  <script type="module">
+
+  </script>
+
   <style>
   </style>
 </head>

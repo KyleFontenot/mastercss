@@ -1,4 +1,4 @@
-import { MasterCSS, config as defaultConfig, Rule, SyntaxLayer } from '../../core/src/index'
+import { MasterCSS, defaultconfig as defaultConfig, Rule, SyntaxLayer } from '../../core/src/index'
 import { type Config, SyntaxRule } from '../../core/src/index'
 
 import './types/global'

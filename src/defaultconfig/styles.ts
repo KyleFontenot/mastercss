@@ -1,0 +1,1 @@
+export interface ConfigStyles { [key: string]: string | ConfigStyles }
